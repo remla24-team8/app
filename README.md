@@ -6,3 +6,27 @@ The application has a frontend and a service, which can, but do not have to, be 
 • Queries the model-service through REST requests.
 
 • The URL of the model-service is configurable as an environment variable.
+
+
+# Usage
+In order to start the app only without docker, one must first launch a virtual environment and install dependencies.
+```
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+```
+
+Afterwards one must launch the backend:
+```
+export FLASK_APP=app.py
+export FLASK_ENV=development
+flask run
+```
+Then the frontend:
+
+```
+cd ./frontend
+npm run dev
+
+```
