@@ -6,7 +6,7 @@ function App() {
   const [inputData, setInputData] = useState('');
 
   useEffect(() => {
-    fetch('/api/version')
+    fetch('/version')
       .then(response => response.json())
       .then(data => setVersion(data.version));
   }, []);
