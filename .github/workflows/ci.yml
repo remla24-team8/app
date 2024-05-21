@@ -1,4 +1,4 @@
-name: Model Service Build
+name: App Backend Build
 
 on:
   push:

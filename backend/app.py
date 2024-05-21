@@ -1,8 +1,10 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import requests
 
 app = Flask(__name__)
+CORS(app)
 model_service_url = os.getenv('MODEL_SERVICE_URL', 'http://localhost:5000')
 
 @app.route('/predict', methods=['POST'])
