@@ -1,8 +1,18 @@
-# app
-The application has a frontend and a service, which can, but do not have to, be implemented separately. The application uses the model service in a sensible use case.
+# app-backend
+This is the app backend, implemented using Flask. It communicates directly with the [model-service](https://github.com/remla24-team8/model-service).
 
-• Depends on the lib-version through a package manager (e.g., Maven). The version is visible in the frontend.
+## Running in development
 
-• Queries the model-service through REST requests.
+Install `uv`.
 
-• The URL of the model-service is configurable as an environment variable.
+Go into the backend folder.
+
+If the dependencies are not up to date, run first `uv pip compile requirements.in -o requirements.txt`.
+
+Install dependencies and the project using `uv pip sync requirements.txt`.
+
+Enter the venv using `. .venv/bin/activate` (or similar for your platform/shell).
+
+Run the service using `flask --app app run`. By default it will run on port 5001.
+
+To connect to the model service, it requires the environment variable MODEL_SERVICE_URL (by default set to localhost:5000).
