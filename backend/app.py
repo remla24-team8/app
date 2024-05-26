@@ -16,9 +16,7 @@ model_service_url = os.getenv('MODEL_SERVICE_URL', 'http://localhost:5000')
 REQUEST_COUNT = Counter('page_requests_total', 'Total number of requests to the page')
 TOTAL_PREDICTIONS = Counter('prediction_requests_total', 'Total number of prediction requests')
 PREDICTION_LATENCY = Histogram('prediction_latency_seconds', 'Latency of prediction requests in seconds')
-# Counter for the number of scam predictions
 SCAM_PREDICTIONS = Counter('scam_predictions', 'Number of scam predictions')
-# Gauge for the percentage of predictions that are scams
 SCAM_PERCENTAGE = Gauge('scam_percentage', 'Percentage of predictions that are classified as scams')
 
 @app.route('/predict', methods=['POST'])
