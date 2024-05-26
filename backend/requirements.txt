@@ -24,6 +24,8 @@ markupsafe==2.1.5
     #   werkzeug
 packaging==24.0
     # via gunicorn
+prometheus-client==0.20.0
+
 requests==2.32.2
 urllib3==1.26.18
     # via requests
