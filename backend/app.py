@@ -4,6 +4,8 @@ import requests
 import os
 import time
 from prometheus_client import start_http_server, Counter, Gauge, Histogram, generate_latest, CONTENT_TYPE_LATEST
+from remla24_team8_lib_version import versioning
+
 
 # Flask app setup
 app = Flask(__name__)
@@ -59,7 +61,9 @@ def predict():
 
 @app.route('/version', methods=['GET'])
 def version():
-    return jsonify({"version": "1.0"})
+    util = versioning.VersionUtil()
+    received_version = util.version
+    return jsonify({"version": received_version})
 
 @app.route('/metrics', methods=['GET'])
 def metrics():
