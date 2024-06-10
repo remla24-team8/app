@@ -24,6 +24,7 @@ markupsafe==2.1.5
     #   werkzeug
 packaging==24.0
     # via gunicorn
+prometheus-client==0.20.0
 remla24-team8-lib-version==0.3.3
 requests==2.32.2
 urllib3==1.26.18
