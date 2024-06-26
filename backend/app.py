@@ -5,7 +5,6 @@ import requests
 from flask import Flask, request, jsonify, Response
 from flask_cors import CORS
 from prometheus_client import (
-    start_http_server,
     Counter,
     Gauge,
     Histogram,
